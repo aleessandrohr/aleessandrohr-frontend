@@ -13,10 +13,10 @@ const Home = () => {
 			<aside className="md:h-dvh md:rounded-r-lg">
 				<Profile />
 			</aside>
-			<main className="flex w-full flex-col md:custom_container md:h-dvh md:overflow-y-auto md:py-0">
+			<main className="md:custom_container flex w-full flex-col md:h-dvh md:overflow-y-auto md:py-0">
 				<div className="relative flex w-full max-w-screen-sm flex-col gap-8 self-end">
 					<section id="about" className="flex flex-col gap-4">
-						<h2 className="custom_title sticky top-0 border-b border-solid border-border bg-background py-2">
+						<h2 className="custom_title sticky top-0 border-border border-b border-solid bg-background py-2">
 							Sobre
 						</h2>
 						<p className="custom_description">
@@ -30,7 +30,7 @@ const Home = () => {
 						</p>
 					</section>
 					<section id="experiences" className="flex flex-col gap-4">
-						<h2 className="custom_title sticky top-0 border-b border-solid border-border bg-background py-2">
+						<h2 className="custom_title sticky top-0 border-border border-b border-solid bg-background py-2">
 							Experiências
 						</h2>
 						{experiencesArray.map(({ subtitle, ...props }) => (
@@ -38,7 +38,7 @@ const Home = () => {
 						))}
 					</section>
 					<section id="projects" className="flex flex-col gap-4">
-						<h2 className="custom_title sticky top-0 border-b border-solid border-border bg-background py-2">
+						<h2 className="custom_title sticky top-0 border-border border-b border-solid bg-background py-2">
 							Projetos
 						</h2>
 						{projectsArray.map(({ title, ...props }) => (

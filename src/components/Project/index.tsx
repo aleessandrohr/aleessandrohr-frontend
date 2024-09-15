@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 import {
 	Card,
 	CardDescription,
+	CardFooter,
 	CardHeader,
 	CardTitle,
-	CardFooter,
 } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Loading } from "@/components/ui/loading";
@@ -46,7 +46,7 @@ export const Project = ({ imageUrl, title, description, href }: Props) => (
 							<iframe
 								src={href}
 								title={title}
-								className="z-index-40 absolute bottom-0 left-0 right-0 top-0 h-full w-full rounded-lg"
+								className="absolute top-0 right-0 bottom-0 left-0 z-index-40 h-full w-full rounded-lg"
 								loading="lazy"
 							/>
 						</div>
@@ -62,7 +62,7 @@ export const Project = ({ imageUrl, title, description, href }: Props) => (
 				<CardDescription className="custom_description">
 					{description}
 				</CardDescription>
-				<CardFooter className="p-0 pt-2 text-sm text-secondary-foreground">
+				<CardFooter className="p-0 pt-2 text-secondary-foreground text-sm">
 					<Link
 						className="flex items-center justify-center gap-2"
 						href={href}

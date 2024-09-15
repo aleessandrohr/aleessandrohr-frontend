@@ -1,4 +1,4 @@
-import { DynamicIconImports } from "@/components/Icon";
+import type { DynamicIconImports } from "@/components/Icon";
 
 export const socialMedia = {
 	github: {
