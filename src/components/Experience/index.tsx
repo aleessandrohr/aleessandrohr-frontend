@@ -23,7 +23,7 @@ export const Experience = ({
 	description,
 }: Props) => (
 	<Card className="flex w-full flex-col gap-2 md:flex-row">
-		<aside className="flex p-6 pb-0 text-sm font-light">
+		<aside className="flex p-6 pb-0 font-light text-sm">
 			<div className="flex items-center justify-start self-start">
 				<span>{start}</span>
 				<Icon name="minus" />
