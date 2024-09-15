@@ -12,6 +12,7 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import { socialMedia } from "@/data/social-media";
+import { ModeToggle } from "@/components/ModeToggle";
 
 const menuItems = [
 	{
@@ -60,14 +61,17 @@ export const Profile = () => (
 				</Button>
 			))}
 		</CardContent>
-		<CardFooter className="flex gap-2">
-			{socialMediaArray.map(({ href, name, icon }) => (
-				<Button asChild key={name} variant="outline" size="icon">
-					<Link href={href} aria-label={name} title={name} target="_blank">
-						<Icon name={icon} />
-					</Link>
-				</Button>
-			))}
+		<CardFooter className="flex flex-wrap justify-between gap-2">
+			<div className="flex gap-2">
+				{socialMediaArray.map(({ href, name, icon }) => (
+					<Button asChild key={name} variant="outline" size="icon">
+						<Link href={href} aria-label={name} title={name} target="_blank">
+							<Icon name={icon} />
+						</Link>
+					</Button>
+				))}
+			</div>
+			<ModeToggle />
 		</CardFooter>
 	</Card>
 );
