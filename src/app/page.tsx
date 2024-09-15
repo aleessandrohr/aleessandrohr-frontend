@@ -5,7 +5,12 @@ import { experiences } from "@/data/experiences";
 import { projects } from "@/data/projects";
 
 const experiencesArray = [experiences.anuntech, experiences.techmmunity];
-const projectsArray = [projects.letmeask, projects.techmmunityLandingPage];
+const projectsArray = [
+	projects.letmeask,
+	projects["in.orbit"],
+	projects.githubClone,
+	projects.techmmunityLandingPage,
+];
 
 const Home = () => {
 	return (

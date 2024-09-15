@@ -1,15 +1,44 @@
-export const projects = {
+interface Projects {
+	[key: string]: {
+		imageUrl: string;
+		title: string;
+		description: string;
+		links: Array<string>;
+		iframeUrl?: string;
+	};
+}
+
+export const projects: Projects = {
 	letmeask: {
 		imageUrl: "/static/assets/letmeask.png",
 		title: "Letmeask",
 		description:
 			"Letmeask é perfeito para criadores de conteúdos poderem criar salas de Q&A com o seu público, de uma forma muito organizada e democrática.",
-		href: "https://letmeask-eight.vercel.app",
+		links: ["https://letmeask-eight.vercel.app"],
+		iframeUrl: "https://letmeask-eight.vercel.app",
+	},
+	"in.orbit": {
+		imageUrl: "/static/assets/in-orbit.png",
+		title: "in.orbit",
+		description:
+			"Adicione atividades que te fazem bem e que você quer continuar praticando toda semana.",
+		links: [
+			"https://github.com/aleessandrohr/nlw-pocket-frontend",
+			"https://github.com/aleessandrohr/nlw-pocket-backend",
+		],
+	},
+	githubClone: {
+		imageUrl: "/static/assets/github-clone.png",
+		title: "Github Clone",
+		description: "Clone do Github escrito em TypeScript e React",
+		links: ["github-clone-br.vercel.app"],
+		iframeUrl: "https://github-clone-br.vercel.app",
 	},
 	techmmunityLandingPage: {
 		imageUrl: "/static/assets/techmmunity-landing-page.png",
 		title: "Techmmunity | Landing Page",
 		description: "A Landing Page.",
-		href: "https://techmmunity.github.io",
+		links: ["https://techmmunity.github.io"],
+		iframeUrl: "https://techmmunity.github.io",
 	},
 };
