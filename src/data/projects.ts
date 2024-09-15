@@ -31,7 +31,7 @@ export const projects: Projects = {
 		imageUrl: "/static/assets/github-clone.png",
 		title: "Github Clone",
 		description: "Clone do Github escrito em TypeScript e React",
-		links: ["github-clone-br.vercel.app"],
+		links: ["https://github-clone-br.vercel.app"],
 		iframeUrl: "https://github-clone-br.vercel.app",
 	},
 	techmmunityLandingPage: {
