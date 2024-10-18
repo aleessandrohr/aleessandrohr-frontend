@@ -13,6 +13,7 @@ import {
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Loading } from "@/components/ui/loading";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Iframe } from "./components/Iframe";
 
 interface Props {
 	imageUrl: string;
@@ -40,7 +41,6 @@ export const Project = ({
 					className="w-full rounded-lg"
 				/>
 			</div>
-
 			<div className="w-full">
 				<Dialog>
 					<DialogTrigger className="w-full" asChild>
@@ -49,38 +49,30 @@ export const Project = ({
 					{iframeUrl && (
 						<DialogContent className="h-[85vh] max-h-[85vh] w-[85vw] max-w-[85vw] rounded-lg">
 							<div className="relative w-full p-2">
-								<Skeleton className="z-index-0 flex h-full w-full items-center justify-center rounded-lg shadow-lg">
-									<Loading>Carregando</Loading>
-								</Skeleton>
-								<iframe
-									src={iframeUrl}
-									title={title}
-									className="absolute top-0 right-0 bottom-0 left-0 z-index-40 h-full w-full rounded-lg"
-									loading="lazy"
-								/>
+								<Iframe title={title} iframeUrl={iframeUrl} />
 							</div>
 						</DialogContent>
 					)}
 				</Dialog>
 			</div>
 		</aside>
-		<section>
-			<CardHeader>
+		<section className="w-full">
+			<CardHeader className="w-full">
 				<CardTitle className="flex flex-col gap-1">
 					<span className="text-xl">{title}</span>
 				</CardTitle>
 				<CardDescription className="custom_description">
 					{description}
 				</CardDescription>
-				<CardFooter className="flex flex-col items-start gap-2 p-0 pt-2 text-secondary-foreground text-sm">
+				<CardFooter className="flex w-full flex-col items-start gap-2 p-0 pt-2 text-secondary-foreground text-sm">
 					{links.map(link => (
 						<Link
 							key={link}
-							className="flex items-center justify-center gap-2"
+							className="flex w-full items-center justify-between gap-2"
 							href={link}
 							target="_blank"
 						>
-							<span className="underline">{link}</span>
+							<span className="break-all underline">{link}</span>
 							<Icon name="external-link" />
 						</Link>
 					))}
