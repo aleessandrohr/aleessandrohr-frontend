@@ -1,4 +1,13 @@
 export const experiences = {
+	anuntechv2: {
+		start: "01/2025",
+		end: "Presente",
+		title: "Desenvolvedor Front-end",
+		subtitle: "Anuntech | Integral | Remota",
+		description:
+			"",
+		techs: "",
+	},
 	anuntech: {
 		start: "07/2024",
 		end: "08/2024",
