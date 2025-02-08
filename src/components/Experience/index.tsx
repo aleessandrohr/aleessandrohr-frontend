@@ -1,6 +1,7 @@
 import { Icon } from "@/components/Icon";
 import {
 	Card,
+	CardContent,
 	CardDescription,
 	CardHeader,
 	CardTitle,
@@ -21,6 +22,7 @@ export const Experience = ({
 	title,
 	subtitle,
 	description,
+	techs,
 }: Props) => (
 	<Card className="flex w-full flex-col gap-2 md:flex-row">
 		<aside className="flex p-6 pb-0 font-light text-sm">
