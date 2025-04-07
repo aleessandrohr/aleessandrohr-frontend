@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Icon } from "@/components/Icon";
+import { ModeToggle } from "@/components/ModeToggle";
 import { Button } from "@/components/ui/button";
 import {
 	Card,
@@ -12,7 +13,6 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import { socialMedia } from "@/data/social-media";
-import { ModeToggle } from "@/components/ModeToggle";
 
 const menuItems = [
 	{
@@ -29,38 +29,40 @@ const menuItems = [
 	},
 ];
 
-const socialMediaArray = [socialMedia.github, socialMedia.linkedin];
+const socialMediaArray = Object.values(socialMedia);
 
 export const Profile = () => (
-	<Card className="flex h-full max-h-full w-full max-w-md flex-col gap-2 overflow-y-auto">
-		<CardHeader>
-			<CardTitle className="flex flex-col gap-2">
-				<picture className="my-4 flex h-full w-full items-center justify-center">
-					<Image
-						src="/static/assets/profile.jpg"
-						alt="Profile"
-						width={480}
-						height={480}
-						className="h-40 w-40 rounded-full object-cover"
-					/>
-				</picture>
-				<span>Alessandro Henrique Ramos</span>
-				<span className="text-xl">Desenvolvedor Front-end</span>
-			</CardTitle>
-			<CardDescription>
-				<span>
-					Olá! Meu nome é Alessandro Henrique Ramos e eu sou um Desenvolvedor
-					Front-end focado em TypeScript e React.
-				</span>
-			</CardDescription>
-		</CardHeader>
-		<CardContent className="flex flex-col gap-2">
-			{menuItems.map(({ href, value }) => (
-				<Button asChild key={value}>
-					<Link href={href}>{value}</Link>
-				</Button>
-			))}
-		</CardContent>
+	<Card className="flex h-full max-h-full w-full max-w-md flex-col justify-between gap-2 overflow-y-auto">
+		<div>
+			<CardHeader>
+				<CardTitle className="flex flex-col gap-2">
+					<picture className="my-4 flex h-full w-full items-center justify-center">
+						<Image
+							src="/static/assets/profile.jpg"
+							alt="Profile"
+							width={480}
+							height={480}
+							className="h-40 w-40 rounded-full object-cover"
+						/>
+					</picture>
+					<span>Alessandro Henrique Ramos</span>
+					<span className="text-xl">Desenvolvedor Front-end</span>
+				</CardTitle>
+				<CardDescription>
+					<span>
+						Olá! Meu nome é Alessandro Henrique Ramos e eu sou um Desenvolvedor
+						Front-end focado em TypeScript e React.
+					</span>
+				</CardDescription>
+			</CardHeader>
+			<CardContent className="flex flex-col gap-2">
+				{menuItems.map(({ href, value }) => (
+					<Button asChild key={value}>
+						<Link href={href}>{value}</Link>
+					</Button>
+				))}
+			</CardContent>
+		</div>
 		<CardFooter className="flex flex-wrap justify-between gap-2">
 			<div className="flex gap-2">
 				{socialMediaArray.map(({ href, name, icon }) => (
