@@ -11,4 +11,9 @@ export const socialMedia = {
 		name: "LinkedIn",
 		icon: "linkedin" as DynamicIconImports,
 	},
+	cal: {
+		href: "https://cal.com/aleessandrohr",
+		name: "Reunião",
+		icon: "calendar-clock" as DynamicIconImports,
+	},
 };
