@@ -32,7 +32,7 @@ const menuItems = [
 const socialMediaArray = Object.values(socialMedia);
 
 export const Profile = () => (
-	<Card className="flex h-full max-h-full w-full max-w-md flex-col justify-between gap-2 overflow-y-auto">
+	<Card className="flex h-full max-h-full w-full max-w-md flex-col justify-between gap-2 overflow-y-auto md:rounded-none">
 		<div>
 			<CardHeader>
 				<CardTitle className="flex flex-col gap-2">
@@ -45,14 +45,14 @@ export const Profile = () => (
 							className="h-40 w-40 rounded-full object-cover"
 						/>
 					</picture>
-					<span>Alessandro Henrique Ramos</span>
-					<span className="text-xl">Desenvolvedor Front-end</span>
+					<h1 className="text-2xl font-bold text-center">Alessandro Henrique Ramos</h1>
+					<h2 className="text-xl">Desenvolvedor Front-end</h2>
 				</CardTitle>
 				<CardDescription>
-					<span>
+					<p>
 						Olá! Meu nome é Alessandro Henrique Ramos e eu sou um Desenvolvedor
 						Front-end focado em TypeScript e React.
-					</span>
+					</p>
 				</CardDescription>
 			</CardHeader>
 			<CardContent className="flex flex-col gap-2">

@@ -9,6 +9,16 @@ interface Projects {
 }
 
 export const projects: Projects = {
+	"in.orbit": {
+		imageUrl: "/static/assets/in-orbit.png",
+		title: "in.orbit",
+		description:
+			"Adicione atividades que te fazem bem e que você quer continuar praticando toda semana.",
+		links: [
+			"https://inorbitmetas.vercel.app",
+		],
+		iframeUrl: "https://inorbitmetas.vercel.app",
+	},
 	letmeask: {
 		imageUrl: "/static/assets/letmeask.png",
 		title: "Letmeask",
@@ -16,16 +26,6 @@ export const projects: Projects = {
 			"Letmeask é perfeito para criadores de conteúdos poderem criar salas de Q&A com o seu público, de uma forma muito organizada e democrática.",
 		links: ["https://letmeask-eight.vercel.app"],
 		iframeUrl: "https://letmeask-eight.vercel.app",
-	},
-	"in.orbit": {
-		imageUrl: "/static/assets/in-orbit.png",
-		title: "in.orbit",
-		description:
-			"Adicione atividades que te fazem bem e que você quer continuar praticando toda semana.",
-		links: [
-			"https://github.com/aleessandrohr/nlw-pocket-frontend",
-			"https://github.com/aleessandrohr/nlw-pocket-backend",
-		],
 	},
 	githubClone: {
 		imageUrl: "/static/assets/github-clone.png",

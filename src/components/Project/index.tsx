@@ -11,8 +11,6 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Loading } from "@/components/ui/loading";
-import { Skeleton } from "@/components/ui/skeleton";
 import { Iframe } from "./components/Iframe";
 
 interface Props {
@@ -73,7 +71,7 @@ export const Project = ({
 							target="_blank"
 						>
 							<span className="break-all underline">{link}</span>
-							<Icon name="external-link" />
+							<Icon name="external-link" className="w-5 h-5" />
 						</Link>
 					))}
 				</CardFooter>

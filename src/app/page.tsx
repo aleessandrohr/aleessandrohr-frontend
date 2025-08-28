@@ -5,15 +5,10 @@ import { experiences } from "@/data/experiences";
 import { projects } from "@/data/projects";
 
 const experiencesArray = [
-	experiences.anuntechv2,
-	experiences.anuntech,
-	experiences.techmmunity,
+	...Object.values(experiences),
 ];
 const projectsArray = [
-	projects.letmeask,
-	projects["in.orbit"],
-	projects.githubClone,
-	projects.techmmunityLandingPage,
+	...Object.values(projects),
 ];
 
 const Home = () => {
