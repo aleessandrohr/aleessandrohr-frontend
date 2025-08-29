@@ -14,25 +14,47 @@ export const projects: Projects = {
 		title: "in.orbit",
 		description:
 			"Adicione atividades que te fazem bem e que você quer continuar praticando toda semana.",
-		links: [
-			"https://inorbitmetas.vercel.app",
-		],
-		iframeUrl: "https://inorbitmetas.vercel.app",
+		links: ["https://inorbit.aleessandrohr.dev.br"],
+		iframeUrl: "https://inorbit.aleessandrohr.dev.br",
 	},
 	letmeask: {
 		imageUrl: "/static/assets/letmeask.png",
 		title: "Letmeask",
 		description:
 			"Letmeask é perfeito para criadores de conteúdos poderem criar salas de Q&A com o seu público, de uma forma muito organizada e democrática.",
-		links: ["https://letmeask-eight.vercel.app"],
-		iframeUrl: "https://letmeask-eight.vercel.app",
+		links: ["https://letmeask.aleessandrohr.dev.br"],
+		iframeUrl: "https://letmeask.aleessandrohr.dev.br",
+	},
+	coldCraft: {
+		imageUrl: "/static/assets/cold-craft.png",
+		title: "Cold Craft",
+		description: "Se cadastre no ColdCraft Summit 2025.",
+		links: ["https://coldcraft.aleessandrohr.dev.br"],
+		iframeUrl: "https://coldcraft.aleessandrohr.dev.br",
 	},
 	githubClone: {
 		imageUrl: "/static/assets/github-clone.png",
 		title: "Github Clone",
 		description: "Clone do Github escrito em TypeScript e React",
-		links: ["https://github-clone-br.vercel.app"],
-		iframeUrl: "https://github-clone-br.vercel.app",
+		links: ["https://githubclone.aleessandrohr.dev.br"],
+		iframeUrl: "https://githubclone.aleessandrohr.dev.br",
+	},
+
+	netflixCopy: {
+		imageUrl: "/static/assets/netflix-copy.png",
+		title: "Netflix Copy",
+		description:
+			"Uma cópia da interface do Netflix escrito em JavaScript e React.",
+		links: ["https://netflixcopy.aleessandrohr.dev.br"],
+		iframeUrl: "https://netflixcopy.aleessandrohr.dev.br",
+	},
+
+	stopWatch: {
+		imageUrl: "/static/assets/stop-watch.png",
+		title: "Stop Watch",
+		description: "Um cronômetro simples escrito em TypeScript e React.",
+		links: ["https://stopwatch.aleessandrohr.dev.br"],
+		iframeUrl: "https://stopwatch.aleessandrohr.dev.br",
 	},
 	techmmunityLandingPage: {
 		imageUrl: "/static/assets/techmmunity-landing-page.png",
