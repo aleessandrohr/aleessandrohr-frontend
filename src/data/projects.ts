@@ -39,7 +39,13 @@ export const projects: Projects = {
 		links: ["https://githubclone.aleessandrohr.dev.br"],
 		iframeUrl: "https://githubclone.aleessandrohr.dev.br",
 	},
-
+	myFirstGameWithCanvas: {
+		imageUrl: "/static/assets/my-first-game-with-canvas.png",
+		title: "My First Game With Canvas",
+		description: "Um jogo simples escrito em TypeScript e Canvas.",
+		links: ["https://game.aleessandrohr.dev.br"],
+		iframeUrl: "https://game.aleessandrohr.dev.br",
+	},
 	netflixCopy: {
 		imageUrl: "/static/assets/netflix-copy.png",
 		title: "Netflix Copy",
