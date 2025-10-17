@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/providers/theme";
+import { ThemeProvider } from "@/providers/theme";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Alessandro | Desenvolvedor de Software",
-	description: "Olá! Meu nome é Alessandro Henrique Ramos este é o portfólio do meu trabalho como desenvolvedor de software.",
+	title: "Alessandro | Desenvolvedor Front-end Pleno",
+	description:
+		"Olá! Me chamo Alessandro Henrique Ramos e este é o portfólio do meu trabalho como Desenvolvedor Front-end Pleno focado em TypeScript e React.js.",
 };
 
 export default function RootLayout({

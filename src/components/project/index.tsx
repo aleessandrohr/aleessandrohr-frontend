@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Icon } from "@/components/Icon";
+import { Icon } from "@/components/icon";
 import { Button } from "@/components/ui/button";
 import {
 	Card,
@@ -11,15 +11,10 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Iframe } from "./components/Iframe";
+import type { Project as ProjectType } from "@/constants/projects";
+import { Iframe } from "./components/iframe";
 
-interface Props {
-	imageUrl: string;
-	title: string;
-	description: string;
-	links: Array<string>;
-	iframeUrl?: string;
-}
+type Props = ProjectType;
 
 export const Project = ({
 	imageUrl,
@@ -62,20 +57,20 @@ export const Project = ({
 				<CardDescription className="custom_description">
 					{description}
 				</CardDescription>
-				<CardFooter className="flex w-full flex-col items-start gap-2 p-0 pt-2 text-secondary-foreground text-sm">
-					{links.map(link => (
-						<Link
-							key={link}
-							className="flex w-full items-center justify-between gap-2"
-							href={link}
-							target="_blank"
-						>
-							<span className="break-all underline">{link}</span>
-							<Icon name="external-link" className="w-5 h-5" />
-						</Link>
-					))}
-				</CardFooter>
 			</CardHeader>
+			<CardFooter className="flex w-full flex-col items-start gap-2 pt-2 text-secondary-foreground text-sm">
+				{links.map(link => (
+					<Link
+						key={link}
+						className="flex w-full items-center gap-2"
+						href={link}
+						target="_blank"
+					>
+						<span className="break-all underline">{link}</span>
+						<Icon name="external-link" className="h-5 w-5" />
+					</Link>
+				))}
+			</CardFooter>
 		</section>
 	</Card>
 );

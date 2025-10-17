@@ -1,15 +1,13 @@
-import { Experience } from "@/components/Experience";
-import { Profile } from "@/components/Profile";
-import { Project } from "@/components/Project";
-import { experiences } from "@/data/experiences";
-import { projects } from "@/data/projects";
+import { Experience } from "@/components/experience";
+import { Profile } from "@/components/profile";
+import { Project } from "@/components/project";
+import { education } from "@/constants/educations";
+import { experiences } from "@/constants/experiences";
+import { projects } from "@/constants/projects";
 
-const experiencesArray = [
-	...Object.values(experiences),
-];
-const projectsArray = [
-	...Object.values(projects),
-];
+const experiencesArray = [...Object.values(experiences)];
+const projectsArray = [...Object.values(projects)];
+const educationArray = [...Object.values(education)];
 
 const Home = () => {
 	return (
@@ -18,19 +16,20 @@ const Home = () => {
 				<Profile />
 			</aside>
 			<main className="md:custom_container flex w-full flex-col md:h-dvh md:overflow-y-auto md:py-0">
-				<div className="relative flex w-full max-w-screen-sm flex-col gap-8 self-end">
-					<section id="about" className="flex flex-col gap-4">
+				<div className="relative flex w-full max-w-screen-sm flex-col gap-8 self-end py-4">
+					<section id="resume" className="flex flex-col gap-4">
 						<h2 className="custom_title sticky top-0 border-border border-b border-solid bg-background py-2">
-							Sobre
+							Resumo
 						</h2>
 						<p className="custom_description">
-							Olá, me chamo Alessandro e atualmente crio aplicações web,
-							principalmente com TypeScript, React e Next.js. Elas são sempre
-							pensadas de modo que fiquem responsivas, performáticas, com um bom
-							SEO e sempre acessíveis para qualquer tipo de usuário, além de
-							claro, terem uma ótima arquitetura e estruturação durante o
-							desenvolvimento do app. Por fim, ao mesmo tempo eu também busco
-							sempre me aprimorar e aperfeiçoar os meus conhecimentos.
+							Desenvolvedor Front‑end especializado em TypeScript e React,
+							focado na construção de aplicações escaláveis, performáticas,
+							responsivas e acessíveis, com SEO bem estruturado. Graduando em
+							Ciência e Tecnologia pela Universidade Federal do Maranhão (UFMA),
+							com interesse em Desenvolvimento de Software e melhores práticas
+							de engenharia. Atualmente na Anuntech, atuando de forma
+							colaborativa para entregar soluções reais em produção, com atenção
+							à arquitetura, qualidade de código e experiência do usuário.
 						</p>
 					</section>
 					<section id="experiences" className="flex flex-col gap-4">
@@ -47,6 +46,14 @@ const Home = () => {
 						</h2>
 						{projectsArray.map(({ title, ...props }) => (
 							<Project key={title} {...props} title={title} />
+						))}
+					</section>
+					<section id="education" className="flex flex-col gap-4">
+						<h2 className="custom_title sticky top-0 border-border border-b border-solid bg-background py-2">
+							Educação
+						</h2>
+						{educationArray.map(({ title, ...props }) => (
+							<Experience key={title} {...props} title={title} />
 						))}
 					</section>
 				</div>

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Icon } from "@/components/Icon";
-import { ModeToggle } from "@/components/ModeToggle";
+import { Icon } from "@/components/icon";
+import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import {
 	Card,
@@ -12,22 +12,14 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import { socialMedia } from "@/data/social-media";
-
-const menuItems = [
-	{
-		href: "#about",
-		value: "Sobre",
-	},
-	{
-		href: "#experiences",
-		value: "Experiências",
-	},
-	{
-		href: "#projects",
-		value: "Projetos",
-	},
-];
+import { menuItems } from "@/constants/menu-items";
+import { socialMedia } from "@/constants/social-media";
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipProvider,
+	TooltipTrigger,
+} from "./ui/tooltip";
 
 const socialMediaArray = Object.values(socialMedia);
 
@@ -35,7 +27,7 @@ export const Profile = () => (
 	<Card className="flex h-full max-h-full w-full max-w-md flex-col justify-between gap-2 overflow-y-auto md:rounded-none">
 		<div>
 			<CardHeader>
-				<CardTitle className="flex flex-col gap-2">
+				<CardTitle className="flex flex-col gap-2 text-center">
 					<picture className="my-4 flex h-full w-full items-center justify-center">
 						<Image
 							src="/static/assets/profile.jpg"
@@ -45,14 +37,12 @@ export const Profile = () => (
 							className="h-40 w-40 rounded-full object-cover"
 						/>
 					</picture>
-					<h1 className="text-2xl font-bold text-center">Alessandro Henrique Ramos</h1>
-					<h2 className="text-xl">Desenvolvedor Front-end</h2>
+					<span className="font-bold text-2xl">Alessandro Henrique Ramos</span>
+					<span className="text-xl">Desenvolvedor Front-end Pleno</span>
 				</CardTitle>
-				<CardDescription>
-					<p>
-						Olá! Meu nome é Alessandro Henrique Ramos e eu sou um Desenvolvedor
-						Front-end focado em TypeScript e React.
-					</p>
+				<CardDescription className="custom_description">
+					Olá! Meu nome é Alessandro Henrique Ramos e eu sou um Desenvolvedor
+					Front-end Pleno focado em TypeScript e React.js.
 				</CardDescription>
 			</CardHeader>
 			<CardContent className="flex flex-col gap-2">
@@ -66,11 +56,18 @@ export const Profile = () => (
 		<CardFooter className="flex flex-wrap justify-between gap-2">
 			<div className="flex gap-2">
 				{socialMediaArray.map(({ href, name, icon }) => (
-					<Button asChild key={name} variant="outline" size="icon">
-						<Link href={href} aria-label={name} title={name} target="_blank">
-							<Icon name={icon} />
-						</Link>
-					</Button>
+					<TooltipProvider key={name}>
+						<Tooltip>
+							<TooltipTrigger asChild>
+								<Button asChild variant="outline" size="icon">
+									<Link href={href} aria-label={name} target="_blank">
+										<Icon name={icon} />
+									</Link>
+								</Button>
+							</TooltipTrigger>
+							<TooltipContent>{name}</TooltipContent>
+						</Tooltip>
+					</TooltipProvider>
 				))}
 			</div>
 			<ModeToggle />

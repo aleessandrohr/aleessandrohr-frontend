@@ -1,14 +1,12 @@
-interface Projects {
-	[key: string]: {
-		imageUrl: string;
-		title: string;
-		description: string;
-		links: Array<string>;
-		iframeUrl?: string;
-	};
+export interface Project {
+	imageUrl: string;
+	title: string;
+	description: string;
+	links: Array<string>;
+	iframeUrl?: string;
 }
 
-export const projects: Projects = {
+export const projects = {
 	"in.orbit": {
 		imageUrl: "/static/assets/in-orbit.png",
 		title: "in.orbit",
@@ -39,13 +37,7 @@ export const projects: Projects = {
 		links: ["https://githubclone.aleessandrohr.dev.br"],
 		iframeUrl: "https://githubclone.aleessandrohr.dev.br",
 	},
-	myFirstGameWithCanvas: {
-		imageUrl: "/static/assets/my-first-game-with-canvas.png",
-		title: "My First Game With Canvas",
-		description: "Um jogo simples escrito em TypeScript e Canvas.",
-		links: ["https://game.aleessandrohr.dev.br"],
-		iframeUrl: "https://game.aleessandrohr.dev.br",
-	},
+
 	netflixCopy: {
 		imageUrl: "/static/assets/netflix-copy.png",
 		title: "Netflix Copy",
@@ -54,14 +46,20 @@ export const projects: Projects = {
 		links: ["https://netflixcopy.aleessandrohr.dev.br"],
 		iframeUrl: "https://netflixcopy.aleessandrohr.dev.br",
 	},
-
-	stopWatch: {
-		imageUrl: "/static/assets/stop-watch.png",
-		title: "Stop Watch",
-		description: "Um cronômetro simples escrito em TypeScript e React.",
-		links: ["https://stopwatch.aleessandrohr.dev.br"],
-		iframeUrl: "https://stopwatch.aleessandrohr.dev.br",
-	},
+	// stopWatch: {
+	// 	imageUrl: "/static/assets/stop-watch.png",
+	// 	title: "Stop Watch",
+	// 	description: "Um cronômetro simples escrito em TypeScript e React.",
+	// 	links: ["https://stopwatch.aleessandrohr.dev.br"],
+	// 	iframeUrl: "https://stopwatch.aleessandrohr.dev.br",
+	// },
+	// myFirstGameWithCanvas: {
+	// 	imageUrl: "/static/assets/my-first-game-with-canvas.png",
+	// 	title: "My First Game With Canvas",
+	// 	description: "Um jogo simples escrito em TypeScript e Canvas.",
+	// 	links: ["https://game.aleessandrohr.dev.br"],
+	// 	iframeUrl: "https://game.aleessandrohr.dev.br",
+	// },
 	techmmunityLandingPage: {
 		imageUrl: "/static/assets/techmmunity-landing-page.png",
 		title: "Techmmunity | Landing Page",
@@ -69,4 +67,4 @@ export const projects: Projects = {
 		links: ["https://techmmunity.github.io"],
 		iframeUrl: "https://techmmunity.github.io",
 	},
-};
+} as const satisfies Record<string, Project>;
