@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
 	title: "Alessandro | Desenvolvedor Front-end Pleno",
 	description:
-		"Olá! Me chamo Alessandro Henrique Ramos e este é o portfólio do meu trabalho como Desenvolvedor Front-end Pleno focado em TypeScript e React.js.",
+		"Olá! Me chamo Alessandro e este é o portfólio do meu trabalho como Desenvolvedor Front-end Pleno focado em TypeScript e React.js.",
 };
 
 export default function RootLayout({
